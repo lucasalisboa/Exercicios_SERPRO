@@ -1,5 +1,9 @@
+const prompt = require("prompt-sync")({ sigint: true });
 let Order = require('./Order.js');
 
-novo_pedido = new Order(2.5,4);
+var preco = prompt("Digite o preco");
+var quantidade = prompt("Digite o quantidade");  
+
+novo_pedido = new Order(preco,quantidade);
 conta = novo_pedido.total();
 console.log(conta)
